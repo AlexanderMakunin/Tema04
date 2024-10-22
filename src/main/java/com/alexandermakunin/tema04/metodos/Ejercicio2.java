@@ -1,5 +1,7 @@
 package com.alexandermakunin.tema04.metodos;
 
+import com.alexandermakunin.tema04.lib.IO;
+
 import java.util.Scanner;
 
 public class Ejercicio2 {
