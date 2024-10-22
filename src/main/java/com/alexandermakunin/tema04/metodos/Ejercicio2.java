@@ -1,4 +1,4 @@
-package com.alexandermakunin.tema03.metodos;
+package com.alexandermakunin.tema04.metodos;
 
 import java.util.Scanner;
 

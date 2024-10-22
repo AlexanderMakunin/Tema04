@@ -1,4 +1,4 @@
-package com.alexandermakunin.tema03.metodos;
+package com.alexandermakunin.tema04.metodos;
 
 public class Ejercicio1 {
     public static int suma(int n1, int n2){

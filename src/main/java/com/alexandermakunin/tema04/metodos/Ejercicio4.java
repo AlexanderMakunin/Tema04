@@ -1,4 +1,4 @@
-package com.alexandermakunin.tema03.metodos;
+package com.alexandermakunin.tema04.metodos;
 
 public class Ejercicio4 {
     public static int maximo(int n1, int n2,int n3, int n4){

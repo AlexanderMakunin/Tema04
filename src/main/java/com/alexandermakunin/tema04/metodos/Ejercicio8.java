@@ -1,4 +1,4 @@
-package com.alexandermakunin.tema03.metodos;
+package com.alexandermakunin.tema04.metodos;
 //por arreglar
 public class Ejercicio8 {
     public static void capicua(int numero1, int numero2, int numero3, int numero4){

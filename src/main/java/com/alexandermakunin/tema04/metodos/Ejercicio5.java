@@ -1,4 +1,4 @@
-package com.alexandermakunin.tema03.metodos;
+package com.alexandermakunin.tema04.metodos;
 
 public class Ejercicio5 {
     public static void ImprimirCaracter(char c, int num){
