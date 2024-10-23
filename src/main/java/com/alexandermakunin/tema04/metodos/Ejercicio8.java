@@ -2,27 +2,21 @@ package com.alexandermakunin.tema04.metodos;
 //por arreglar
 public class Ejercicio8 {
     public static void capicua(int numero1, int numero2, int numero3, int numero4){
-        String nada = "";
-        String nada2 = "";
-        char A;
-        nada = nada + numero1;
-        for (int b = (nada.length()); b >=0; b--) {
-            A = (nada.charAt(b));
-            nada2 = A + nada2;
-            System.out.println(nada2);
-        }
-        if (nada2.equals(nada)){
-            System.out.println("Es equivalente");
+        if  (numero1 == numero4 && numero2 == numero3) {
+            System.out.println("Es capicua");
         } else {
-            System.out.println("No es equivalente");
+            System.out.println("No es capicua");
         }
-
     }
     public static void main(String [] args){
-        int numero1 = 1321;
-        int numero2 = 2252;
-        int numero3 = 2123;
-        int numero4 = 2552;
-        capicua(numero1,numero2,numero3,numero4);
+        int numero = 1331;
+        int numero4 = numero % 10;
+        int numero3 = numero % 100 - numero4;
+        int resultado3 = numero3 / 10;
+        int numero2 = numero % 1000 - numero3 - numero4;
+        int resultado2 = numero2 / 100;
+        int numero1 = numero % 10000 - numero2 - numero3 - numero4;
+        int resultado1 = numero1 / 1000;
+        capicua(resultado1,resultado2,resultado3,numero4);
     }
 }
