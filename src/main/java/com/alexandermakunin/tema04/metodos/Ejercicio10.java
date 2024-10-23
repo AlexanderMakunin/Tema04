@@ -20,6 +20,6 @@ public class Ejercicio10 {
                 break;
             }
             TablaDeMultiplicar(numero1);
-        }
+        }leer.close();
     }
 }
