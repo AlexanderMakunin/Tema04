@@ -8,7 +8,7 @@ public class Ejercicio7 {
         } return resultado;
     }
     public static void main(String [] args){
-        int numero1 = 0;
+        int numero1 = 1;
         long resultado = factorial(numero1);
         System.out.print(resultado);
     }
