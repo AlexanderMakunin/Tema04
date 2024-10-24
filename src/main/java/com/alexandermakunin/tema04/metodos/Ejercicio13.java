@@ -1,17 +1,27 @@
 package com.alexandermakunin.tema04.metodos;
 
 public class Ejercicio13 {
-    public static void Saludar(String Hola, String codigo) {
-        switch (codigo){
-            case "a" -> System.out.println("Bon dia "+Hola);
-            case "b" -> System.out.println("Buenos dias "+Hola);
-            case "c" -> System.out.println("Good morning "+Hola);
+    /**
+     *
+     * @param Hola El nombre a saludar
+     * @param idioma El idioma a saludar
+     * @return Devolvera un String
+     */
+    public static String Saludar(String Hola, char idioma) {
+        String saludar;
+        switch (idioma){
+            case 'a' -> saludar = "Bon dia "+Hola;
+            case 'b' -> saludar = "Buenos dias "+Hola;
+            case 'c' -> saludar = "Good morning "+Hola;
+            default -> saludar = "Fuera de rango";
         }
+        return saludar;
     }
 
     public static void main(String[] args) {
         String nombre = "Alex";
-        String idioma = "b";
-        Saludar(nombre,idioma);
+        char idioma = 'b';
+        String saludo = Saludar(nombre,idioma);
+        System.out.print(saludo);
     }
 }

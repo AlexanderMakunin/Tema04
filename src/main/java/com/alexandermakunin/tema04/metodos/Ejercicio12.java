@@ -12,19 +12,19 @@ public class Ejercicio12 {
      * @return Es lo que va a devolver
      */
     public static Calificacion CalcularNota(int NotaEntrada) {
-        Calificacion Salida;
+        Calificacion salida;
         if (NotaEntrada <= 4) {
-            Salida = Calificacion.INSUFICIENTE;
+            salida = Calificacion.INSUFICIENTE;
         } else if (NotaEntrada <= 6) {
-            Salida = Calificacion.SUFICIENTE;
+            salida = Calificacion.SUFICIENTE;
         } else if (NotaEntrada <= 7) {
-            Salida = Calificacion.BIEN;
+            salida = Calificacion.BIEN;
         } else if (NotaEntrada <= 8) {
-            Salida = Calificacion.NOTABLE;
+            salida = Calificacion.NOTABLE;
         } else {
-            Salida = Calificacion.EXCELENTE;
+            salida = Calificacion.EXCELENTE;
         }
-        return Salida;
+        return salida;
     }
 
     public static void main(String[] args) {

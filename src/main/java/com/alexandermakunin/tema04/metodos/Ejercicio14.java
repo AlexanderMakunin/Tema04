@@ -2,28 +2,26 @@ package com.alexandermakunin.tema04.metodos;
 
 import java.util.Scanner;
 
+import static com.alexandermakunin.tema04.metodos.Ejercicio7.factorial;
+
 public class Ejercicio14 {
-    public static void Operacion(float n, float m) {
-        double ResultadoN = 0;
-        for (int i = 0; i < n; i++) {
-            ResultadoN = ResultadoN + n;
-        }
-        double ResultadoM = 0;
-        for (int i = 0; i < m; i++) {
-            ResultadoM = ResultadoM + m;
-        }
-        double Resultado = ResultadoN/ResultadoM*(ResultadoN-ResultadoM);
-        System.out.println(Resultado);
+    public static float Operacion(int n, int m) {
+        long resultadoN = factorial(n);
+        long resultadoM = factorial(m);
+        int resta = n - m;
+        long restafactorial = factorial(resta);
+        float resultado = resultadoN/(resultadoM * restafactorial);
+        return resultado;
     }
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        int n;
-        int m;
         System.out.println("Introduzca un numero");
-        n = Integer.parseInt(leer.nextLine());
+        int n = Integer.parseInt(leer.nextLine());
         System.out.println("Introduzca otro numero");
-        m = Integer.parseInt(leer.nextLine());
-        Operacion(n,m);
+        int m = Integer.parseInt(leer.nextLine());
+        leer.close();
+        float resultado = Operacion(n,m);
+        System.out.println(resultado);
     }
 }
