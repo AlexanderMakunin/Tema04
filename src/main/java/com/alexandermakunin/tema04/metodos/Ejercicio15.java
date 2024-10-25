@@ -1,14 +1,13 @@
 package com.alexandermakunin.tema04.metodos;
 
-import java.util.Random;
 import java.util.Scanner;
+import static com.alexandermakunin.tema04.lib.IO.proabilidades;
 
 //esto ni de coña lo programo a las 4 am grasias
 
 public class Ejercicio15 {
     public static void main(String[] args) throws InterruptedException {
         final int DELAY = 500;
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         boolean plantado = false;
         int tiradaPlayer;
@@ -36,7 +35,7 @@ public class Ejercicio15 {
                 do {
                     System.out.println("Jugador lanza el dado al aire ...");
                     Thread.sleep(DELAY);
-                    tiradaPlayer = random.nextInt(1, 7);
+                    tiradaPlayer = proabilidades(1, 7);
                     System.out.println("\n*****");
                     System.out.println("* " + tiradaPlayer + " *");
                     System.out.println("*****");
@@ -52,7 +51,7 @@ public class Ejercicio15 {
                             while (puntosCPU < puntosPlayer) {
                                 System.out.println("CPU lanza el dado al aire ...");
                                 Thread.sleep(DELAY);
-                                tiradaCPU = random.nextInt(1, 7);
+                                tiradaCPU = proabilidades(1, 7);
                                 System.out.println("\n?????");
                                 System.out.println("? " + tiradaCPU + " ?");
                                 System.out.println("?????\n");
