@@ -1,5 +1,6 @@
 package com.alexandermakunin.tema04.lib;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class IO {
@@ -55,5 +56,10 @@ public class IO {
                 resultado = resultado + c;
             }resultado = resultado + "\n";
         }return resultado;
+    }
+    public static int proabilidades(int min, int max) {
+        Random quiniela = new Random();
+        int aleatorio = quiniela.nextInt(min, max);
+        return aleatorio;
     }
 }
