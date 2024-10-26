@@ -3,8 +3,6 @@ package com.alexandermakunin.tema04.metodos;
 import java.util.Random;
 import java.util.Scanner;
 
-//esto ni de coña lo programo a las 4 am grasias
-
 public class Ejercicio15 {
     public static void main(String[] args) throws InterruptedException {
         final int DELAY = 500;
