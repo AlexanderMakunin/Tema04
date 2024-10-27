@@ -27,6 +27,23 @@ public class IO {
         return texto;
     }
 
+    public static char solictarChar(String mensaje, int longitudMinima, int longitudMaxima) {
+        Scanner leer = new Scanner(System.in);
+        char texto;
+        String longitudTexto;
+        do {
+            System.out.println(mensaje);
+            texto = leer.nextLine().charAt(0);
+            longitudTexto = String.valueOf(texto);
+            if (longitudTexto.length() < longitudMinima || longitudTexto.length() > longitudMaxima) {
+                System.err.println("Vuelve a intentarlo");
+            }
+        }
+        while (longitudTexto.length() < longitudMinima || longitudTexto.length() > longitudMaxima);
+        leer.close();
+        return texto;
+    }
+
     /**
      * Solicita un numero y valida que este entre el minimo y maximo
      *
@@ -58,8 +75,8 @@ public class IO {
         }return resultado;
     }
     public static int proabilidades(int min, int max) {
-        Random quiniela = new Random();
-        int aleatorio = quiniela.nextInt(min, max);
+        Random proabilidad = new Random();
+        int aleatorio = proabilidad.nextInt(min, max);
         return aleatorio;
     }
 }
