@@ -39,11 +39,11 @@ public class Ejercicio4 {
             return Zodiaco.VIRGO;
         } else if (dia == 31 && mes == Month.OCTOBER || dia <=22 && mes == Month.NOVEMBER){
             return Zodiaco.LIBRA;
+        } else if (23 <= dia && 28 >= dia && mes == Month.NOVEMBER) {
+            return Zodiaco.ESCORPIO;
         } else if ((dia >= 29 && mes == Month.NOVEMBER) || (dia <=17 && mes == Month.DECEMBER)){
             return Zodiaco.OFIUCO;
-        } else if (23 <= dia || 28 >= dia && mes == Month.NOVEMBER) {
-            return Zodiaco.ESCORPIO;
-        }  else if (dia >= 18 && mes == Month.DECEMBER    || dia <= 20 && mes == Month.JANUARY){
+        } else if (dia >= 18 && mes == Month.DECEMBER    || dia <= 20 && mes == Month.JANUARY){
             return Zodiaco.SAGITARIO;
         } else if (dia >= 21 && mes == Month.JANUARY || dia <=17 && mes == Month.FEBRUARY){
             return Zodiaco.CAPRICORNIO;
@@ -52,7 +52,7 @@ public class Ejercicio4 {
     }
     public static void main(String [] args){
         Scanner leer = new Scanner(System.in);
-        System.out.println("Pon tu fecha de nacimiento en: dd/mm/yyy");
+        System.out.println("Pon tu fecha de nacimiento en: dd/mm/yyyy");
         String fechaStr = leer.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate fechaNacimiento = LocalDate.parse(fechaStr,formatter);
