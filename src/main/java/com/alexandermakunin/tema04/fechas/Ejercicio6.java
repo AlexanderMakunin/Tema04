@@ -16,18 +16,18 @@ import java.util.TimerTask;
 public class Ejercicio6 {
     public static void main(String [] args){
         Timer timer = new Timer();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime ahora = LocalDateTime.now();
+        String fechaFormateada = ahora.format(dateTimeFormatter);
+        LocalDateTime unaFecha = LocalDateTime.parse("01/01/2025 00:00:00", dateTimeFormatter);
+        LocalDateTime otraFecha = LocalDateTime.parse(fechaFormateada, dateTimeFormatter);
+        long dias = ChronoUnit.DAYS.between(otraFecha, unaFecha);
         //LocalTime minusSeconds(long seconds);
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                LocalDateTime fecha = LocalDateTime.now();
-                //Period queda = Period.between(fechaHora, fecha);
-                DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-                LocalDateTime salida = LocalDateTime.parse(fecha,sdf);
-                long a = 20;
-                LocalDateTime queda = fecha.minusSeconds(a);
-                fechaFormateada = queda.format(sdf);
-                System.out.println(fechaFormateada);
+                LocalDateTime queda = ChronoUnit.SECONDS.addTo(unaFecha, -1);
+                System.out.println(queda);
             }
         }, 0, 1000);
     }
