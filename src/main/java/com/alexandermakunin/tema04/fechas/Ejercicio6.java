@@ -16,16 +16,18 @@ import java.util.TimerTask;
 public class Ejercicio6 {
     public static void main(String [] args){
         Timer timer = new Timer();
-        LocalTime fecha = LocalTime.now();
-        //Period queda = Period.between(fechaHora, fecha);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
         //LocalTime minusSeconds(long seconds);
-        int a;
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                LocalTime queda = fecha.minusSeconds(1);
-                System.out.println(queda);
+                LocalDateTime fecha = LocalDateTime.now();
+                //Period queda = Period.between(fechaHora, fecha);
+                DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+                LocalDateTime salida = LocalDateTime.parse(fecha,sdf);
+                long a = 20;
+                LocalDateTime queda = fecha.minusSeconds(a);
+                fechaFormateada = queda.format(sdf);
+                System.out.println(fechaFormateada);
             }
         }, 0, 1000);
     }
