@@ -7,6 +7,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Ejercicio6 {
+    /**
+     * Para que el contador
+     * @param a para que empiece en 1
+     * @param b para que vaya subiendo
+     * @return el numero para ir restando al numero final
+     */
     public static int contador(int a,int b){
         a = a + b;
         return a;
@@ -16,7 +22,8 @@ public class Ejercicio6 {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("dd/MM HH:mm:ss");
         LocalDateTime ahora = LocalDateTime.now();
-        System.out.println(ahora);
+        String DiaHoy = ahora.format(dateTimeFormatter);
+        System.out.println("El dia de hoy: " + DiaHoy);
         int diaAhora = ahora.getDayOfMonth();
         int mesAhora = ahora.getMonthValue();
         int horaAhora = ahora.getHour();
@@ -33,9 +40,9 @@ public class Ejercicio6 {
         int hora = horaAhora - horaAnyoNuevo;
         int minutos = minutosAhora - minutosAnyoNuevo;
         int segundos = segundosAhora - segundosAnyoNuevo;
-        LocalDateTime Segundos = ChronoUnit.SECONDS.addTo(anyoNuevo, -segundos -1);
-        LocalDateTime Minutos = ChronoUnit.MINUTES.addTo(Segundos, -minutos -1);
-        LocalDateTime Horas = ChronoUnit.HOURS.addTo(Minutos, -hora -1);
+        LocalDateTime Segundos = ChronoUnit.SECONDS.addTo(anyoNuevo, -segundos);
+        LocalDateTime Minutos = ChronoUnit.MINUTES.addTo(Segundos, -minutos);
+        LocalDateTime Horas = ChronoUnit.HOURS.addTo(Minutos, -hora);
         LocalDateTime Dias = ChronoUnit.DAYS.addTo(Horas, -dia -1);
         LocalDateTime Meses = ChronoUnit.MONTHS.addTo(Dias, -mes -1);
         final int a = 1;
@@ -47,7 +54,7 @@ public class Ejercicio6 {
                 i = contador(a,i);
                 LocalDateTime queda = ChronoUnit.SECONDS.addTo(Meses, -i);
                 String fechaFormateada = queda.format(dateTimeFormatter2);
-                System.out.println(fechaFormateada);
+                System.out.println("Queda: " + fechaFormateada);
             }
         }, 0, 1000);
     }
