@@ -45,5 +45,6 @@ public class Ejercicio3 {
         Planeta planeta = Planeta.values()[Elegirplaneta - 1];
         LocalDate fechaNacimiento = LocalDate.parse(fechaStr,formatter);
         System.out.printf("Tienes %.0f años\n", edadEnPlanetas(fechaNacimiento, planeta));
+        leer.close();
     }
 }

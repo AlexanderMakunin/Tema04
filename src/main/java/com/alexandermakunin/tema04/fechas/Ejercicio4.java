@@ -58,5 +58,6 @@ public class Ejercicio4 {
         LocalDate fechaNacimiento = LocalDate.parse(fechaStr,formatter);
         Zodiaco resultado = CualEsTuSignoZodiaco(fechaNacimiento);
         System.out.println("Tu signo del zodiaco es " + resultado);
+        leer.close();
     }
 }

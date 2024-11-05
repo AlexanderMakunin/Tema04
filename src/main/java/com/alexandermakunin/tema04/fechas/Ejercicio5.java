@@ -15,6 +15,7 @@ public class Ejercicio5 {
         LocalDateTime salida = LocalDateTime.parse(fechaStr,sdf);
         System.out.println("ingrese la velocidad de la nave en kilómetros por hora (km/h)");
         int km = Integer.parseInt(leer.nextLine());
+        leer.close();
         float tiempo = distancia / km;
         seg = (long)tiempo * 3600;
         min = seg / 60;
