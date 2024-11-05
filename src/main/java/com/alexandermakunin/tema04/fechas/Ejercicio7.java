@@ -3,11 +3,7 @@ package com.alexandermakunin.tema04.fechas;
 import com.alexandermakunin.tema04.lib.IO;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
-
-import static com.alexandermakunin.tema04.lib.IO.solicitarString;
 
 public class Ejercicio7 {
     public static LocalDate sumarAnios(LocalDate fechaSobreElCalculo) {
