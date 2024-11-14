@@ -12,7 +12,7 @@ public class IO {
      * @param longitudMaxima Numero maximo de caracteres que debe tener el texto
      * @return El texto leido validado
      */
-    public static String solictarString(String mensaje, int longitudMinima, int longitudMaxima) {
+    public static String solicitarString(String mensaje, int longitudMinima, int longitudMaxima) {
         Scanner leer = new Scanner(System.in);
         String texto;
         do {
@@ -23,7 +23,7 @@ public class IO {
             }
         }
         while (texto.length() < longitudMinima || texto.length() > longitudMaxima);
-        leer.close();
+
         return texto;
     }
 
@@ -52,7 +52,7 @@ public class IO {
      * @param numMaxima numero maximo que debe tener el numero
      * @return Numero validado
      */
-    public static int solictarInt(String mensaje, int numMinima, int numMaxima) {
+    public static int solicitarInt(String mensaje, int numMinima, int numMaxima) {
         Scanner leer = new Scanner(System.in);
         int numero;
         do {
@@ -63,7 +63,7 @@ public class IO {
             }
         }
         while (numero< numMinima || numero > numMaxima);
-        leer.close();
+
         return numero;
     }
     public static String ImprimirCaracter(char c, int num, int num2){
